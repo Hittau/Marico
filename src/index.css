@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.container {
+		@apply max-w-[1640px] mx-auto px-4 !important;
+	}
+	.about-container {
+		@apply max-w-[1024px] mx-auto px-4 !important;
+	}
+}
+
+@layer components {
+	.list-item {
+	}
+}
+
+@layer utilities {
+	.bg-clip-text {
+		background-clip: text !important;
+		-webkit-background-clip: text !important;
+		text-fill-color: transparent !important;
+		-webkit-text-fill-color: transparent !important;
+	}
+	.bg-gradient {
+		background: #fe6783;
+		background: linear-gradient(90deg, #fe6783 1.9%, #ffbf84 97.1%);
+	}
+	.faded-text {
+		@apply text-cobble-200 hover:text-white transition-colors duration-300;
+	}
+	.default-align {
+		align-items: start !important;
+		text-align: start !important;
+	}
+}
+
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+header.scrolled {
+	@apply py-2 sm:py-3 md:py-4;
+}
+header.scrolled .logo span {
+	@apply text-3xl;
+}
+header.scrolled .logo img {
+	@apply scale-75;
+}
